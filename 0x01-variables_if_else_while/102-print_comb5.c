@@ -20,9 +20,9 @@ int main(void)
 				break;
 			}
 			n1 = firstDigit;
+			n2 = secondDigit + 1;
 			for (thirdDigit = n1; thirdDigit < 58; thirdDigit++)
 			{
-				n2 = secondDigit + 1;
 				for (fourthDigit = n2; fourthDigit < 58; fourthDigit++)
 				{
 					putchar(firstDigit);
@@ -40,6 +40,7 @@ int main(void)
 						putchar(' ');
 					}
 				}
+				n2 = 48;
 			}
 		}
 	}

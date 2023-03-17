@@ -25,21 +25,17 @@ int main(void)
 				n2 = secondDigit + 1;
 				for (fourthDigit = n2; fourthDigit < 58; fourthDigit++)
 				{
+					putchar(firstDigit);
+					putchar(secondDigit);
+					putchar(' ');
+					putchar(thirdDigit);
+					putchar(fourthDigit);
 					if (firstDigit == 57 && secondDigit == 56)
 					{
-						putchar(firstDigit);
-						putchar(secondDigit);
-						putchar(' ');
-						putchar(thirdDigit);
-						putchar(fourthDigit);
+
 					}
 					else
 					{
-						putchar(firstDigit);
-						putchar(secondDigit);
-						putchar(' ');
-						putchar(thirdDigit);
-						putchar(fourthDigit);
 						putchar(',');
 						putchar(' ');
 					}

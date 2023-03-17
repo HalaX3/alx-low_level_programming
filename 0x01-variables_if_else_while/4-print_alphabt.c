@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: C program that prints the lowercase letters
+ * Description: C program that prints the lowercase letters not q and e
  *
  * Return: Always 0 (Success)
  */
@@ -13,7 +13,7 @@ int main(void)
 
 	for (a = 'a'; a <= z; a++)
 	{
-		if (a != 'q' || a != 'e')
+		if (a != 'q' && a != 'e')
 			putchar(a);
 	}
 	putchar('\n');

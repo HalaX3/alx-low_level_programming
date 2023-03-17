@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: C program that prints all possible combination of two two-digits
+ * Description: C program that prints all possible combination of 2 two-digits
  *
  * Return: Always 0 (Success)
  */

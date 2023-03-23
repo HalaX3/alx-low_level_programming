@@ -8,24 +8,32 @@
 
 int main(void)
 {
-	long long num, factor;
+	long int n;
+	long int max;
+	long int i;
 
-	num = 612852475143;
-	factor = 2;
+	n = 612852475143;
+	max = -1;
 
-	while (num > 1)
+	while (n % 2 == 0)
 	{
-		if (num % factor == 0)
+		max = 2;
+		n /= 2;
+	}
+
+	for (i = 3; i <= sqrt(n); i = i + 2)
+	{
+		while (n % i == 0)
 		{
-			num /= factor;
-		}
-		else
-		{
-			factor++;
+			max = i;
+			n = n / i;
 		}
 	}
 
-	printf("%lld\n", factor);
+	if (n > 2)
+		max = n;
+
+	printf("%ld\n", max);
 
 	return (0);
 }

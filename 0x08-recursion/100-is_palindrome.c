@@ -15,26 +15,26 @@ int is_palindrome(char *s)
 	if (!*s)
 		return (1);
 
-	return (check_palindrome(s, s + strlen(s) - 1));
+	return (check_palindrome(s, 0, strlen(s)));
 }
 
 /**
  * check_palindrome - checks if a string is a palindrome
- * @start: starting position of the string
- * @end: ending position of the string
- *
+ * @s: string to be checked
+ * @x: iteration
+ * @length: the length of a string
  * Return: 1 if the string is a palindrome, 0 otherwise
  */
 
-int check_palindrome(char *start, char *end)
+int check_palindrome(char *s, int x, int length)
 {
-	if (start >= end)
-		return (1);
-
-	if (*start != *end)
+	if (*(s + x) != *(s + length - 1))
 		return (0);
 
-	return (check_palindrome(start + 1, end - 1));
+	if (x >= length)
+		return (1);
+
+	return (check_palindrome(s, x + 1, length - 1));
 }
 
 /**

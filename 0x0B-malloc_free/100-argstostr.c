@@ -24,25 +24,20 @@ char *argstostr(int ac, char **av)
 
 	y += ac;
 
-	s = malloc(sizeof(char) * (y + 1));
+	s = malloc(sizeof(char) * y + 1);
 
 	if (s == NULL)
 		return (NULL);
 
-	while (index < ac)
+	for (index = 0; index < ac; index++)
 	{
-		index2 = 0;
-		while (av[index][index2])
+		for (index2 = 0; av[index][index2]; index2++)
 		{
 			s[x] = av[index][index2];
 			x++;
-			index2++;
 		}
 		if (s[x] == '\0')
-		{
 			s[x++] = '\n';
-		}
-		index++;
 	}
 
 	return (s);

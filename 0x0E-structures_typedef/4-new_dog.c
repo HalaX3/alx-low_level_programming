@@ -7,17 +7,17 @@
  * Return: length of string
  */
 
-int str_len(char *str)
+int str_len(char *s)
 {
 	int itr;
 
 	itr = 0;
-	while (str[itr] != '\0')
+	while (s[itr] != '\0')
 	{
 		itr++;
 	}
 
-	return (i);
+	return (itr);
 }
 
 /**
@@ -29,7 +29,7 @@ int str_len(char *str)
  * Return: the pointer to dest
  */
 
-char *str_cpy(char *d, char *s)
+char *str_copy(char *d, char *s)
 {
 	int length, itr;
 
@@ -83,8 +83,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(dogptr->name);
 		return (NULL);
 	}
-	str_cpy(dogptr->name, name);
-	strcpy(dogptr->owner, owner);
+	str_copy(dogptr->name, name);
+	str_copy(dogptr->owner, owner);
 	dogptr->age = age;
 
 	return (dogptr);

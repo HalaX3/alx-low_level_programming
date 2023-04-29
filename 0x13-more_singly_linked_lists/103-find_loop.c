@@ -22,7 +22,7 @@ listint_t *find_listint_loop(listint_t *head)
 		if (f == slow)
 		{
 			s = head;
-			while (f != s)
+			while (s != f)
 			{
 				f = f->next;
 				s = s->next;

@@ -8,17 +8,17 @@ void close_file(int fd);
 
 /**
  * close_file - Closes file.
- * @f: The file descriptor to be closed.
+ * @fd: The file descriptor to be closed.
  */
-void close_file(int f)
+void close_file(int fd)
 {
 	int x;
 
-	x = close(f);
+	x = close(fd);
 
 	if (x == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
